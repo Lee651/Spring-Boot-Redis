@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydatabase?characterEncoding=utf-8
+    username: root
+    password: li123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: li123456
+    lettuce:
+      pool:
+        max-idle: 8
+        min-idle: 2
+
+mybatis:
+  mapper-locations: classpath:top/rectorlee/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 9999
